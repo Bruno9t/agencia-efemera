@@ -1,0 +1,61 @@
+<%- include('./partials/header') %>
+
+<main>
+
+    <div>
+        <br>
+        <h2 class='text-center'>Newsletter</h2>
+        <br>
+        <table class='table table-bordered 
+        table-striped table-dark table-hover' style='width:100%;margin: 20px;'>
+
+            <tr>
+                <th>N°</th>
+                <th>E-mail</th>
+                <th>Data de inscrição</th>
+            </tr>
+
+            <% for(let i=0;i<newsletter.length; i++) { %>
+
+                  <tr>
+                    <th scope="row"><%= i+1 %></th>
+                    <td scope='col'><%= newsletter[i].email %></td>
+                    <td scope='col'><%= newsletter[i].date %></td>
+                  </tr>
+                
+            <% } %>
+
+        </table>
+        <br>
+
+    </div>
+
+    <div>
+        <h2 class='text-center'>Contatos</h2>
+        <br>
+    <table class='table table-bordered 
+    table-striped table-dark table-hover' style='width:100%;margin: 20px;'>
+
+        <tr>
+            <th>N°</th>
+            <th>Nome</th>
+            <th>E-mail</th> 
+        </tr>
+
+        <% for(let j=0; j<contatos.length; j++ ) {%>
+              <tr>
+                <th scope="row"><%= j+1 %></th>
+                <td scope='col'><%= contatos[j].nome %></td>
+                <td scope='col'><%= contatos[j].email%></td>
+              </tr>
+            
+        <% } %>
+
+    </table>
+    <br>
+
+    </div>
+
+</main>
+
+<%- include('./partials/footer') %>

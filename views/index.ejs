@@ -5,7 +5,7 @@
         class="carousel slide"
         data-ride="carousel"
       >
-        <div class="carousel-inner">
+        <div class="carousel-inner" style='height: 500px;'>
           
           <%for(let i=0; i<listaBanners.length;i++) { %>
             <%if(i==0){%>
@@ -37,6 +37,8 @@
         </a>
       </div>
     </section>
+
+    <%- include('./partials/newsletter') %>
 
     <section id="servicos" class="py-5 mb-5">
       <div class="container">
@@ -83,7 +85,9 @@
       <div class="container py-5">
         <div class="row">
           <div class="col-md-6">
-            <form>
+
+            <form action="/contato"  method="POST">
+
               <h2>Contato</h2>
 
               <div class="form-group">
